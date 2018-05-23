@@ -35,6 +35,8 @@ li{
     margin: 0 auto;
     line-height: 1.5;
     font-size: small;
+    position: relative;
+    height: 100%;
     /*padding-bottom: 50px;*/
 }
 .leftBoxContent .name{
@@ -94,13 +96,14 @@ progress::-webkit-progress-value  { background: white;border-top-left-radius: 10
 }
 
 .contactMe{
-    /*position: relative;*/
-    margin-top: 414px;
+    position: absolute;
+    /*margin-top: 414px;*/
     text-align: left;
     color: white;
     font-weight: bold;
     /*padding-bottom: 70px;*/
     font-size: large;
+    bottom: 110px;
 }
 .rightBoxContent{
     padding: 50px 40px;
