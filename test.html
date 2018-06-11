@@ -1,30 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
     <style>
-        .left{
-            width: 300px;
-            height: 800px;
-            background-color: #0086b3;
-            position: relative;
+        #content{overflow:hidden;}
+        .left{width:200px; margin-bottom:-3000px; padding-bottom:3000px; background:#cad5eb; float:left;}
+        .right{width:400px; margin-bottom:-3000px; padding-bottom:3000px; background:#f0f3f9; float:right;}
+        .center{margin:0 410px 0 210px; background:#ffe6b8; height:600px;}
+        .leftcontent{
+            background-color:red;
+            height: 200px;
+            width:50%;
         }
-        .leftContent{
-            width: 30px;
-            height: 80px;
-            background-color: darkgreen;
-            position: absolute;
-            bottom: 20px;
-            left: 10px;
+        .center{
+            overflow:hidden;
+        }
+        .centerLeft{
+            width:30%;
+            margin-bottom:-2000px;
+            padding-bottom:2000px;
+            background:red;
+            float:left;
+        }
+        .centerRight{
+            width:30%;
+            margin-bottom:-2000px;
+            padding-bottom:2000px;
+            background:chartreuse;
+            float:right;
+        }
+        .centerCenter{
+            background:blue;
         }
     </style>
 </head>
 <body>
-<div class="left">
-    <div class="leftContent">
-        ;;;;;;;
+
+<div id="content">
+    <div class="left">左边，无高度属性，自适应于最高一栏的高度
+        <div class="leftcontent">wo yao guo liu yi</div>
+    </div>
+    <div class="right">右边，无高度属性，自适应于最高一栏的高度</div>
+    <div class="center">
+        <div class="centerLeft">居中左边</div>
+        <div class="centerRight">居中右边</div>
+        <div class="centerCenter">居中右边</div>
     </div>
 </div>
+
 </body>
 </html>

@@ -39,24 +39,24 @@ function bind() {
     console.log(count);
 
     var tbody = document.getElementsByTagName("tbody")[0];
-    var tr = document.getElementsByTagName("tr");
-    var price;
-    //事件委托问题
-    tbody.onclick = function(ev){
-        //浏览器兼容问题
-        var ev = ev || window.event;
-        var target = ev.target || ev.srcElement;
+var tr = document.getElementsByTagName("tr");
+var price;
+//事件委托问题
+tbody.onclick = function(ev){
+    //浏览器兼容问题
+    var ev = ev || window.event;
+    var target = ev.target || ev.srcElement;
 
-        if(target.nodeName.toLowerCase() == "a"){
-            price = Number(target.parentNode.parentNode.firstChild.nextSibling.innerText);
-            tbody.removeChild(target.parentNode.parentNode);
-        }
-
-
-        allPrice = (allPrice - price).toFixed(2);
-        count = count - 1;
-        footTextTd.innerHTML = allPrice+"("+count+"件商品)";
+    if(target.nodeName.toLowerCase() == "a"){
+        price = Number(target.parentNode.parentNode.firstChild.nextSibling.innerText);
+        tbody.removeChild(target.parentNode.parentNode);
     }
+
+
+    allPrice = (allPrice - price).toFixed(2);
+    count = count - 1;
+    footTextTd.innerHTML = allPrice+"("+count+"件商品)";
+}
 
 }
 bind();
